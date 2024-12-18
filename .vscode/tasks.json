@@ -1,0 +1,34 @@
+{ 
+    "version": "2.0.0", // This specifies the version of the tasks configuration schema. 
+    "tasks": [ 
+        { 
+            "label": "build example", // This is a descriptive name for the task. 
+            // "build example", indicates that this task is used to build the example project. 
+
+            "type": "shell", // This specifies the type of task. 
+            // "shell", means that the task will be executed in a shell environment (like a command prompt or terminal). 
+
+            "command": "cl", // This specifies the command that will be executed when the task runs. 
+            "args": [ // This is an array of arguments that will be passed to the command specified. 
+                "/O2", // This sets the optimization level. 
+                "/LD", // This tells the compiler to create a dynamic-link library (DLL), which is equivalent to the -shared option in g++.
+                "/EHsc", // This enables C++ exception handling, which is important if you are using exceptions in your code. 
+
+                "/IC:/Users/user/anaconda3/envs/nlp/include", // Python include path 
+                "/IC:/Users/user/anaconda3/envs/nlp/Lib/site-packages/pybind11/include", // Pybind11 include path 
+                // /I is used to specify include paths (similar to -I in g++). 
+
+                "/Fe:example.pyd", // This is the name of the output file. 
+                // /Fe: This specifies the output filename. 
+                // The syntax is slightly different from g++, where you use -o to specify the output file. 
+
+                "example.cpp" // This is the source file that will be compiled. 
+            ], 
+            "group": { 
+                "kind": "build", // This task is a build task. 
+                "isDefault": true // This task will be the default build task, which can be triggered by pressing Ctrl + Shift + B. 
+            }, 
+            "problemMatcher": ["$msCompile"] // Use the problem matcher for MSVC. 
+        } 
+    ] 
+} 

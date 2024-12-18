@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "name": "Win32", // Windows environment 
+            "includePath": [ // This specifies the directories where the compiler should look for header files. 
+                "C:\\Users\\user\\anaconda3\\envs\\nlp\\include", // Python Headers Path 
+                "C:\\Users\\user\\anaconda3\\envs\\nlp\\Lib\\site-packages\\pybind11\\include" // Pybind11 Path 
+            ],
+            "defines": [ 
+                "_DEBUG", // It is typically used to enable debugging features. 
+                "UNICODE", // It indicates that the application uses Unicode character encoding. 
+                "_UNICODE" // It is used in conjunction with UNICODE to enable wide-character support. 
+            ],
+            "windowsSdkVersion": "10.0.22621.0", // This specifies the version of the Windows SDK that you are targeting. 
+            "compilerPath": "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.42.34433/bin/Hostx64/x64/cl.exe", // cl Path 
+            "cStandard": "c17", // This specifies the C standard to be used by the compiler. 
+            "cppStandard": "c++17", // This specifies the C++ standard to be used by the compiler. 
+            "intelliSenseMode": "windows-msvc-x64" // This specifies the IntelliSense engine mode. 
+        } 
+    ],
+    "version": 4
+}
